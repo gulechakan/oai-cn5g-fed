@@ -33,7 +33,7 @@ Note: In case readers are interested in deploying debuggers/developers core netw
 7. [Undeploy Network Functions](#7-undeploy-network-functions)
 8. [Conclusion](#8-conclusion)
 
-For this demo, all the images which use the `develop` branch have been retrieved from the official `docker-hub` (see also
+For this demo, all the images which use the `v2.2.0` branch have been retrieved from the official `docker-hub` (see also
 [Retrieving images](./RETRIEVE_OFFICIAL_IMAGES.md)).
 
 This tutorial shows how to configure the Traffic Steering feature at SMF and UPF, based on policies from the PCF.
@@ -135,15 +135,15 @@ Also all should be in an `healthy` state before going further. The `mysql` conta
 ``` console 
 docker-compose-host $: docker ps
 CONTAINER ID   IMAGE                 COMMAND                  CREATED          STATUS                    PORTS                          NAMES
-16e442edd7b9   oai-smf:develop        "/bin/bash /openair-…"   30 seconds ago   Up 29 seconds (healthy)   80/tcp, 8080/tcp, 8805/udp     oai-smf
-17cd7f15c863   oai-amf:develop       "python3 /openair-am…"   31 seconds ago   Up 29 seconds (healthy)   80/tcp, 9090/tcp, 38412/sctp   oai-amf
-81d91b0e9719   oai-ausf:develop       "/bin/bash /openair-…"   32 seconds ago   Up 31 seconds (healthy)   80/tcp                         oai-ausf
+16e442edd7b9   oai-smf:v2.2.0        "/bin/bash /openair-…"   30 seconds ago   Up 29 seconds (healthy)   80/tcp, 8080/tcp, 8805/udp     oai-smf
+17cd7f15c863   oai-amf:v2.2.0       "python3 /openair-am…"   31 seconds ago   Up 29 seconds (healthy)   80/tcp, 9090/tcp, 38412/sctp   oai-amf
+81d91b0e9719   oai-ausf:v2.2.0       "/bin/bash /openair-…"   32 seconds ago   Up 31 seconds (healthy)   80/tcp                         oai-ausf
 4c11b8c156fc   trf-gen-cn5g:latest   "/bin/bash -c 'iptab…"   32 seconds ago   Up 30 seconds (healthy)                                  oai-ext-dn
-9da12093f3d6   oai-udm:develop        "/bin/bash /openair-…"   33 seconds ago   Up 31 seconds (healthy)   80/tcp                         oai-udm
-b867ac7db503   oai-upf-vpp:develop    "/openair-upf/bin/en…"   34 seconds ago   Up 31 seconds (healthy)   2152/udp, 8085/udp             vpp-upf
-4e133a45bd0b   oai-pcf:develop        "/bin/bash /openair-…"   34 seconds ago   Up 33 seconds (healthy)   80/tcp, 8080/tcp               oai-pcf
-341271bb659a   oai-udr:develop        "/bin/bash /openair-…"   34 seconds ago   Up 33 seconds (healthy)   80/tcp                         oai-udr
-aa8cbc6fe533   oai-nrf:develop        "python3 /openair-nr…"   34 seconds ago   Up 33 seconds (healthy)   80/tcp, 9090/tcp               oai-nrf
+9da12093f3d6   oai-udm:v2.2.0        "/bin/bash /openair-…"   33 seconds ago   Up 31 seconds (healthy)   80/tcp                         oai-udm
+b867ac7db503   oai-upf-vpp:v2.1.0    "/openair-upf/bin/en…"   34 seconds ago   Up 31 seconds (healthy)   2152/udp, 8085/udp             vpp-upf
+4e133a45bd0b   oai-pcf:v2.2.0        "/bin/bash /openair-…"   34 seconds ago   Up 33 seconds (healthy)   80/tcp, 8080/tcp               oai-pcf
+341271bb659a   oai-udr:v2.2.0        "/bin/bash /openair-…"   34 seconds ago   Up 33 seconds (healthy)   80/tcp                         oai-udr
+aa8cbc6fe533   oai-nrf:v2.2.0        "python3 /openair-nr…"   34 seconds ago   Up 33 seconds (healthy)   80/tcp, 9090/tcp               oai-nrf
 ac10687810e0   mysql:5.7             "docker-entrypoint.s…"   34 seconds ago   Up 33 seconds (healthy)   3306/tcp, 33060/tcp            mysql         
 ```
 

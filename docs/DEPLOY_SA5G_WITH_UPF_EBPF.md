@@ -602,14 +602,13 @@ To check the status of the different containers, run the following command:
 ``` shell
 docker-compose-host $: docker ps
 CONTAINER ID   IMAGE                                     COMMAND                  CREATED          STATUS                    PORTS                                    NAMES
-5064dc400acc   oaisoftwarealliance/oai-smf:develop       "/openair-smf/bin/oa…"   43 minutes ago   Up 43 minutes (healthy)   80/tcp, 8080/tcp, 8805/udp               oai-smf
-813f70ec16de   oaisoftwarealliance/oai-amf:develop       "/openair-amf/bin/oa…"   44 minutes ago   Up 43 minutes (healthy)   80/tcp, 8080/tcp, 9090/tcp, 38412/sctp   oai-amf
-df91ba4925ee   oaisoftwarealliance/oai-ausf:develop      "/openair-ausf/bin/o…"   44 minutes ago   Up 43 minutes (healthy)   80/tcp, 8080/tcp                         oai-ausf
-6f04d0ae0277   oaisoftwarealliance/oai-udm:develop       "/openair-udm/bin/oa…"   44 minutes ago   Up 43 minutes (healthy)   80/tcp, 8080/tcp                         oai-udm
-67f3582a91ad   oaisoftwarealliance/oai-udr:develop       "/openair-udr/bin/oa…"   44 minutes ago   Up 43 minutes (healthy)   80/tcp, 8080/tcp                         oai-udr
-04514567425a   oaisoftwarealliance/oai-nrf:develop       "/openair-nrf/bin/oa…"   44 minutes ago   Up 43 minutes (healthy)   80/tcp, 8080/tcp, 9090/tcp               oai-nrf
+5064dc400acc   oaisoftwarealliance/oai-smf:v2.2.0       "/openair-smf/bin/oa…"   43 minutes ago   Up 43 minutes (healthy)   80/tcp, 8080/tcp, 8805/udp               oai-smf
+813f70ec16de   oaisoftwarealliance/oai-amf:v2.2.0       "/openair-amf/bin/oa…"   44 minutes ago   Up 43 minutes (healthy)   80/tcp, 8080/tcp, 9090/tcp, 38412/sctp   oai-amf
+df91ba4925ee   oaisoftwarealliance/oai-ausf:v2.2.0      "/openair-ausf/bin/o…"   44 minutes ago   Up 43 minutes (healthy)   80/tcp, 8080/tcp                         oai-ausf
+6f04d0ae0277   oaisoftwarealliance/oai-udm:v2.2.0       "/openair-udm/bin/oa…"   44 minutes ago   Up 43 minutes (healthy)   80/tcp, 8080/tcp                         oai-udm
+67f3582a91ad   oaisoftwarealliance/oai-udr:v2.2.0       "/openair-udr/bin/oa…"   44 minutes ago   Up 43 minutes (healthy)   80/tcp, 8080/tcp                         oai-udr
+04514567425a   oaisoftwarealliance/oai-nrf:v2.2.0       "/openair-nrf/bin/oa…"   44 minutes ago   Up 43 minutes (healthy)   80/tcp, 8080/tcp, 9090/tcp               oai-nrf
 0b31a261a392   mysql:8.0                                 "docker-entrypoint.s…"   44 minutes ago   Up 44 minutes (healthy)   3306/tcp, 33060/tcp                      mysql
-ubuntu@eiffel:~$
 ```
 
 ### 6.2 Build UPF-eBPF

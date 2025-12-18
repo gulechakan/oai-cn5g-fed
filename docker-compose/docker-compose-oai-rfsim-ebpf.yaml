@@ -1,6 +1,7 @@
 version: '3.8'
 services:
     oai-gnb:
+        #temporary image
         image: phinetech/oai-gnb:eth-pdu-latest
         privileged: true
         container_name: oai-gnb
@@ -20,10 +21,11 @@ services:
             timeout: 5s
             retries: 5
     oai-nr-ue1:
+        #temporary image
         image: phinetech/oai-ue:eth-pdu-latest
         privileged: true
         container_name: oai-nr-ue1
-        environment: 
+        environment:
             USE_ADDITIONAL_OPTIONS: -E --rfsim -r 106 --numerology 1 -C 3619200000 --rfsimulator.serveraddr 192.168.70.153 --log_config.global_log_options level,nocolor,time
         depends_on:
             - oai-gnb
@@ -38,6 +40,7 @@ services:
             timeout: 5s
             retries: 5
     oai-nr-ue2:
+        #temporary image
         image: phinetech/oai-ue:eth-pdu-latest
         privileged: true
         container_name: oai-nr-ue2

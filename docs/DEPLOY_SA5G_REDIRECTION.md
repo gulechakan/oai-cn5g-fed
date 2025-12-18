@@ -37,18 +37,6 @@ Note: In case readers are interested in deploying debuggers/developers core netw
 For this demo, all the images which use the `develop` branch have been retrieved from the official `docker-hub` (see also
 [Retrieving images](./RETRIEVE_OFFICIAL_IMAGES.md)).
 
-| NF Name | Branch Name | Tag used at time of writing | Ubuntu 22.04 | RHEL8 |
-|----------|:------------|-----------------------------|--------------|-------|
-| NSSF     | `develop`    | `v2.0.1`                    | X            | -     |
-| AMF      | `develop`    | `v2.0.1`                    | X            | -     |
-| AUSF     | `develop`    | `v2.0.1`                    | X            | -     |
-| NRF      | `develop`    | `v2.0.1`                    | X            | -     |
-| SMF      | `develop`    | `v2.0.1`                    | X            | -     |
-| UDR      | `develop`    | `v2.0.1`                    | X            | -     |
-| UDM      | `develop`    | `v2.0.1`                    | X            | -     |
-| PCF      | `develop`    | `v2.0.1`                    | X            | -     |
-| UPF-VPP  | `develop`    | `v2.0.1`                    | X            | -     |
-
 <br/>
 
 This tutorial shows how to configure the Traffic Redirection feature at SMF and UPF, based on policies from the PCF.
@@ -152,7 +140,7 @@ CONTAINER ID   IMAGE                 COMMAND                  CREATED          S
 81d91b0e9719   oai-ausf:develop       "/bin/bash /openair-…"   32 seconds ago   Up 31 seconds (healthy)   80/tcp                         oai-ausf
 4c11b8c156fc   trf-gen-cn5g:latest   "/bin/bash -c 'iptab…"   32 seconds ago   Up 30 seconds (healthy)                                  oai-ext-dn
 9da12093f3d6   oai-udm:develop        "/bin/bash /openair-…"   33 seconds ago   Up 31 seconds (healthy)   80/tcp                         oai-udm
-b867ac7db503   oai-upf-vpp:develop    "/openair-upf/bin/en…"   34 seconds ago   Up 31 seconds (healthy)   2152/udp, 8085/udp             vpp-upf
+b867ac7db503   oai-upf-vpp:v2.1.0    "/openair-upf/bin/en…"   34 seconds ago   Up 31 seconds (healthy)   2152/udp, 8085/udp             vpp-upf
 4e133a45bd0b   oai-pcf:develop        "/bin/bash /openair-…"   34 seconds ago   Up 33 seconds (healthy)   80/tcp, 8080/tcp               oai-pcf
 341271bb659a   oai-udr:develop        "/bin/bash /openair-…"   34 seconds ago   Up 33 seconds (healthy)   80/tcp                         oai-udr
 aa8cbc6fe533   oai-nrf:develop        "python3 /openair-nr…"   34 seconds ago   Up 33 seconds (healthy)   80/tcp, 9090/tcp               oai-nrf

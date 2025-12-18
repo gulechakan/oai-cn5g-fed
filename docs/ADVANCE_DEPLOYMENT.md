@@ -35,23 +35,23 @@ The users can either pull the docker images from official docker-hub repository 
 
 ## 1.1 Pulling docker images ##
 
-OAI [official docker-hub repository](https://hub.docker.com/u/oaisoftwarealliance) has three type of image tags develop, latest or version, 
+OAI [official docker-hub repository](https://hub.docker.com/u/oaisoftwarealliance) has three type of image tags v2.2.0, latest or version,
 
-- `latest` tag coresponds to latest release or master branch of the core network function 
-- `develop` tag corresponds to develop branch or next release of the core network function 
-- `version tag vX.X.X` corresponds to a release 
+- `latest` tag coresponds to latest release or master branch of the core network function
+- `v2.2.0` tag corresponds to v2.2.0 branch or next release of the core network function
+- `version tag vX.X.X` corresponds to a release
 
-You can copy the below lines in a shell script and use it to pull the images or just pull it the way you want and re-tag if you want. By default, we are pulling develop images.
+You can copy the below lines in a shell script and use it to pull the images or just pull it the way you want and re-tag if you want. By default, we are pulling v2.2.0 images.
 
 ```shell
 docker pull mysql:8.0
-docker pull oaisoftwarealliance/oai-amf:develop
-docker pull oaisoftwarealliance/oai-smf:develop
-docker pull oaisoftwarealliance/oai-nrf:develop
-docker pull oaisoftwarealliance/oai-udm:develop
-docker pull oaisoftwarealliance/oai-udr:develop
-docker pull oaisoftwarealliance/oai-ausf:develop
-docker pull oaisoftwarealliance/oai-spgwu-tiny:develop
+docker pull oaisoftwarealliance/oai-amf:v2.2.0
+docker pull oaisoftwarealliance/oai-smf:v2.2.0
+docker pull oaisoftwarealliance/oai-nrf:v2.2.0
+docker pull oaisoftwarealliance/oai-udm:v2.2.0
+docker pull oaisoftwarealliance/oai-udr:v2.2.0
+docker pull oaisoftwarealliance/oai-ausf:v2.2.0
+docker pull oaisoftwarealliance/oai-spgwu-tiny:v2.2.0
 ```
 
 In the docker-compose file we are using the image names as above. If you wish to re-tag with some other name then please change the name in the docker-compose file.
@@ -68,7 +68,7 @@ The example is for AMF:
 
 ```bash
 # clone amf repository 
-git clone -b <prefered_branch or develop> https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-amf.git
+git clone -b <prefered_branch or v2.2.0> https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-amf.git
 cd oai-cn5g-amf/docker/
 # Depending on the environment where the image will be used choose the correct dockerfile
 vi/vim/nano/subl Dockerfile.amf.ubuntu

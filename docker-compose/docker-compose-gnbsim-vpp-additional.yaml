@@ -1,7 +1,7 @@
 services:
     gnbsim-vpp2:
         container_name: gnbsim-vpp2
-        image: gnbsim:latest
+        image: rohankharade/gnbsim:latest
         privileged: true
         environment:
             - MCC=208
@@ -41,7 +41,7 @@ services:
 
     gnbsim-vpp3:
         container_name: gnbsim-vpp3
-        image: gnbsim:latest
+        image: rohankharade/gnbsim:latest
         privileged: true
         environment:
             - MCC=208

@@ -156,10 +156,10 @@ CONTAINER ID   IMAGE                 COMMAND                  CREATED          S
 4c11b8c156fc   trf-gen-cn5g:latest   "/bin/bash -c 'iptab…"   32 seconds ago   Up 30 seconds (healthy)                                  oai-ext-dn-internet
 2ef303b9bc02   trf-gen-cn5g:latest   "/bin/bash -c 'iptab…"   32 seconds ago   Up 31 seconds (healthy)                                  oai-ext-dn-edge
 9da12093f3d6   oai-udm:v1.5.0        "/bin/bash /openair-…"   33 seconds ago   Up 31 seconds (healthy)   80/tcp                         oai-udm
-b867ac7db503   oai-upf-vpp:v1.5.0    "/openair-upf/bin/en…"   34 seconds ago   Up 31 seconds (healthy)   2152/udp, 8085/udp             vpp-upf-ulcl
+b867ac7db503   oai-upf-vpp:v2.1.0    "/openair-upf/bin/en…"   34 seconds ago   Up 31 seconds (healthy)   2152/udp, 8085/udp             vpp-upf-ulcl
 4e133a45bd0b   oai-pcf:v1.5.0        "/bin/bash /openair-…"   34 seconds ago   Up 33 seconds (healthy)   80/tcp, 8080/tcp               oai-pcf
-24d29ca1257b   oai-upf-vpp:v1.5.0    "/openair-upf/bin/en…"   34 seconds ago   Up 32 seconds (healthy)   2152/udp, 8085/udp             vpp-upf-aupf2
-08d289a69916   oai-upf-vpp:v1.5.0    "/openair-upf/bin/en…"   34 seconds ago   Up 32 seconds (healthy)   2152/udp, 8085/udp             vpp-upf-aupf1
+24d29ca1257b   oai-upf-vpp:v2.1.0    "/openair-upf/bin/en…"   34 seconds ago   Up 32 seconds (healthy)   2152/udp, 8085/udp             vpp-upf-aupf2
+08d289a69916   oai-upf-vpp:v2.1.0    "/openair-upf/bin/en…"   34 seconds ago   Up 32 seconds (healthy)   2152/udp, 8085/udp             vpp-upf-aupf1
 341271bb659a   oai-udr:v1.5.0        "/bin/bash /openair-…"   34 seconds ago   Up 33 seconds (healthy)   80/tcp                         oai-udr
 aa8cbc6fe533   oai-nrf:v1.5.0        "python3 /openair-nr…"   34 seconds ago   Up 33 seconds (healthy)   80/tcp, 9090/tcp               oai-nrf
 ac10687810e0   mysql:5.7             "docker-entrypoint.s…"   34 seconds ago   Up 33 seconds (healthy)   3306/tcp, 33060/tcp            mysql         

@@ -21,7 +21,7 @@ services:
                 ipv4_address: 192.168.70.131
     oai-nssf:
         container_name: "oai-nssf"
-        image: oaisoftwarealliance/oai-nssf:develop
+        image: oaisoftwarealliance/oai-nssf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -39,7 +39,7 @@ services:
                 ipv4_address: 192.168.70.132
     oai_udr:
         container_name: "oai-udr"
-        image: oaisoftwarealliance/oai-udr:develop
+        image: oaisoftwarealliance/oai-udr:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -52,7 +52,7 @@ services:
                 ipv4_address: 192.168.70.133
     oai_udm:
         container_name: "oai-udm"
-        image: oaisoftwarealliance/oai-udm:develop
+        image: oaisoftwarealliance/oai-udm:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -65,7 +65,7 @@ services:
                 ipv4_address: 192.168.70.134
     oai_ausf:
         container_name: "oai-ausf"
-        image: oaisoftwarealliance/oai-ausf:develop
+        image: oaisoftwarealliance/oai-ausf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -78,7 +78,7 @@ services:
                 ipv4_address: 192.168.70.135
     oai_nrf_slice12:
         container_name: "oai-nrf-slice12"
-        image: oaisoftwarealliance/oai-nrf:develop
+        image: oaisoftwarealliance/oai-nrf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -89,7 +89,7 @@ services:
                 ipv4_address: 192.168.70.136
     oai_nrf_slice3:
         container_name: "oai-nrf-slice3"
-        image: oaisoftwarealliance/oai-nrf:develop
+        image: oaisoftwarealliance/oai-nrf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -100,7 +100,7 @@ services:
                 ipv4_address: 192.168.70.137
     oai_amf:
         container_name: "oai-amf"
-        image: oaisoftwarealliance/oai-amf:develop
+        image: oaisoftwarealliance/oai-amf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -116,7 +116,7 @@ services:
                 ipv4_address: 192.168.70.138
     oai_smf_slice1:
         container_name: "oai-smf-slice1"
-        image: oaisoftwarealliance/oai-smf:develop
+        image: oaisoftwarealliance/oai-smf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -131,7 +131,7 @@ services:
                 ipv4_address: 192.168.70.139
     oai_smf_slice2:
         container_name: "oai-smf-slice2"
-        image: oaisoftwarealliance/oai-smf:develop
+        image: oaisoftwarealliance/oai-smf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -146,7 +146,7 @@ services:
                 ipv4_address: 192.168.70.140
     oai_smf_slice3:
         container_name: "oai-smf-slice3"
-        image: oaisoftwarealliance/oai-smf:develop
+        image: oaisoftwarealliance/oai-smf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -163,7 +163,7 @@ services:
                 ipv4_address: 192.168.70.141
     oai_upf_slice1:
         container_name: "oai-upf-slice1"
-        image: oaisoftwarealliance/oai-upf:develop
+        image: oaisoftwarealliance/oai-upf:v2.2.0
         expose:
             - 2152/udp
             - 8805/udp
@@ -186,7 +186,7 @@ services:
                 ipv4_address: 192.168.70.142
     oai_upf_slice2:
         container_name: "oai-upf-slice2"
-        image: oaisoftwarealliance/oai-upf:develop
+        image: oaisoftwarealliance/oai-upf:v2.2.0
         expose:
             - 2152/udp
             - 8805/udp

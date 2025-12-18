@@ -1,7 +1,7 @@
 services:
     gnbsim-ebpf:
         container_name: gnbsim-ebpf
-        image: gnbsim:develop
+        image: rohankharade/gnbsim:latest
         privileged: true
         environment:
             - MCC=208
