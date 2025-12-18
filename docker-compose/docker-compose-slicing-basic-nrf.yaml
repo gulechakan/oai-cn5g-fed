@@ -1,8 +1,7 @@
-version: '3.8'
 services:
     mysql:
         container_name: "mysql"
-        image: mysql:8.0
+        image: mysql:9.0
         volumes:
             - ./database/oai_db2.sql:/docker-entrypoint-initdb.d/oai_db.sql
             - ./healthscripts/mysql-healthcheck2.sh:/tmp/mysql-healthcheck.sh
@@ -22,7 +21,7 @@ services:
                 ipv4_address: 192.168.70.131
     oai-nssf:
         container_name: "oai-nssf"
-        image: oaisoftwarealliance/oai-nssf:v2.1.0
+        image: oaisoftwarealliance/oai-nssf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -40,7 +39,7 @@ services:
                 ipv4_address: 192.168.70.132
     oai_udr:
         container_name: "oai-udr"
-        image: oaisoftwarealliance/oai-udr:v2.1.0
+        image: oaisoftwarealliance/oai-udr:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -53,7 +52,7 @@ services:
                 ipv4_address: 192.168.70.133
     oai_udm:
         container_name: "oai-udm"
-        image: oaisoftwarealliance/oai-udm:v2.1.0
+        image: oaisoftwarealliance/oai-udm:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -66,7 +65,7 @@ services:
                 ipv4_address: 192.168.70.134
     oai_ausf:
         container_name: "oai-ausf"
-        image: oaisoftwarealliance/oai-ausf:v2.1.0
+        image: oaisoftwarealliance/oai-ausf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -79,7 +78,7 @@ services:
                 ipv4_address: 192.168.70.135
     oai_nrf_slice12:
         container_name: "oai-nrf-slice12"
-        image: oaisoftwarealliance/oai-nrf:v2.1.0
+        image: oaisoftwarealliance/oai-nrf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -90,7 +89,7 @@ services:
                 ipv4_address: 192.168.70.136
     oai_nrf_slice3:
         container_name: "oai-nrf-slice3"
-        image: oaisoftwarealliance/oai-nrf:v2.1.0
+        image: oaisoftwarealliance/oai-nrf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -101,7 +100,7 @@ services:
                 ipv4_address: 192.168.70.137
     oai_amf:
         container_name: "oai-amf"
-        image: oaisoftwarealliance/oai-amf:v2.1.0
+        image: oaisoftwarealliance/oai-amf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -117,7 +116,7 @@ services:
                 ipv4_address: 192.168.70.138
     oai_smf_slice1:
         container_name: "oai-smf-slice1"
-        image: oaisoftwarealliance/oai-smf:v2.1.0
+        image: oaisoftwarealliance/oai-smf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -132,7 +131,7 @@ services:
                 ipv4_address: 192.168.70.139
     oai_smf_slice2:
         container_name: "oai-smf-slice2"
-        image: oaisoftwarealliance/oai-smf:v2.1.0
+        image: oaisoftwarealliance/oai-smf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -147,7 +146,7 @@ services:
                 ipv4_address: 192.168.70.140
     oai_smf_slice3:
         container_name: "oai-smf-slice3"
-        image: oaisoftwarealliance/oai-smf:v2.1.0
+        image: oaisoftwarealliance/oai-smf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -164,7 +163,7 @@ services:
                 ipv4_address: 192.168.70.141
     oai_upf_slice1:
         container_name: "oai-upf-slice1"
-        image: oaisoftwarealliance/oai-upf:v2.1.0
+        image: oaisoftwarealliance/oai-upf:v2.2.0
         expose:
             - 2152/udp
             - 8805/udp
@@ -187,7 +186,7 @@ services:
                 ipv4_address: 192.168.70.142
     oai_upf_slice2:
         container_name: "oai-upf-slice2"
-        image: oaisoftwarealliance/oai-upf:v2.1.0
+        image: oaisoftwarealliance/oai-upf:v2.2.0
         expose:
             - 2152/udp
             - 8805/udp
@@ -208,50 +207,6 @@ services:
         networks:
             public_net:
                 ipv4_address: 192.168.70.143
-    vpp_upf_slice3:
-        container_name: "vpp-upf-slice3"
-        image: oaisoftwarealliance/oai-upf-vpp:v2.1.0
-        privileged: true
-        environment:
-            - IF_1_IP=192.168.70.201
-            - IF_1_TYPE=N4
-            - IF_2_IP=192.168.72.201
-            - IF_2_TYPE=N3
-            - IF_2_NWI=access.oai.org
-            - IF_3_IP=192.168.73.201
-            - IF_3_TYPE=N6
-            - IF_3_IP_REMOTE=192.168.73.145 # EXT-DN IP Address
-            - IF_3_NWI=internet.oai.org
-            - NAME=VPP-UPF
-            - MNC=95
-            - MCC=208
-            - REALM=3gppnetwork.org
-            - VPP_MAIN_CORE=0
-            - VPP_CORE_WORKER=1
-#           - VPP_PLUGIN_PATH=/usr/lib64/vpp_plugins/                # RHEL7
-            - VPP_PLUGIN_PATH=/usr/lib/x86_64-linux-gnu/vpp_plugins/
-            - SNSSAI_SD=000082
-            - SNSSAI_SST=130
-            - DNN=oai.ipv4
-            - REGISTER_NRF=yes
-            - NRF_IP_ADDR=192.168.70.137
-            - NRF_PORT=8080
-            - HTTP_VERSION=2
-        depends_on:
-            - oai_nrf_slice3
-            - oai_smf_slice3
-        healthcheck:
-            test: /bin/bash -c "pgrep vpp"
-            interval: 10s
-            timeout: 5s
-            retries: 5
-        networks:
-            public_net:
-                ipv4_address: 192.168.70.144
-            public_net_access:
-                ipv4_address: 192.168.72.144
-            public_net_core:
-                ipv4_address: 192.168.73.144
     oai_ext_dn:
         image: oaisoftwarealliance/trf-gen-cn5g:latest
         privileged: true

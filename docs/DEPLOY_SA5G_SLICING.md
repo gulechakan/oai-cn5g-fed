@@ -32,18 +32,6 @@ Note: In case readers are interested in deploying debuggers/developers core netw
 
 You can also retrieve the images from `docker-hub`. See [Retrieving images](./RETRIEVE_OFFICIAL_IMAGES.md).
 
-| CNF Name    | Branch Name   | Tag used at time of writing   | Ubuntu 22.04 | RHEL8         |
-| ----------- |:------------- | ----------------------------- | ------------ | --------------|
-| NSSF        | `master`      | `v2.0.1`                      | X            | X              |
-| AMF         | `master`      | `v2.0.1`                      | X            | X              |
-| AUSF        | `master`      | `v2.0.1`                      | X            | X              |
-| NRF         | `master`      | `v2.0.1`                      | X            | X              |
-| SMF         | `master`      | `v2.0.1`                      | X            | X              |
-| UDR         | `master`      | `v2.0.1`                      | X            | X              |
-| UDM         | `master`      | `v2.0.1`                      | X            | X              |
-| UPF         | `master`      | `v2.0.1`                      | X            | X              |
-| UPF-VPP     | `master`      | `v2.0.1`                      | X            | X              |
-
 <br/>
 
 In this tutorial we are going to explore the slicing feature of OAI 5G core network. Here we will validate -
@@ -151,7 +139,7 @@ docker-compose-host $: sudo chmod 666 /tmp/oai/slicing-with-nssf/slicing-with-ns
 <!---
 For CI purposes please ignore this line
 ``` shell
-docker-compose-host $: ../ci-scripts/checkContainerStatus.py --container_name mysql --timeout 120
+docker-compose-host $: ../ci-scripts/checkContainerStatus.py --container_name mysql --timeout 180
 docker-compose-host $: ../ci-scripts/checkContainerStatus.py --container_name oai-upf-slice1 --timeout 30
 ```
 -->

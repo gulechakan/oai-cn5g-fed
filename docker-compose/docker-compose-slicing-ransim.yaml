@@ -1,4 +1,3 @@
-version: '3.8'
 services:
     ueransim:
         container_name: ueransim
@@ -37,7 +36,7 @@ services:
             - APN=default
             - SST_R=128 #Requested N-SSAI
             - SD_R=128
-            - SST_C=128 
+            - SST_C=128
             - SD_C=128
             - SST_D=128
             - SD_D=128
@@ -50,12 +49,12 @@ services:
             timeout: 5s
             retries: 5
     oai-gnb:
-        image: oaisoftwarealliance/oai-gnb:develop
+        image: oaisoftwarealliance/oai-gnb:2025.w49
         privileged: true
         container_name: rfsim5g-oai-gnb
-        environment: 
+        environment:
             RFSIMULATOR: server
-            USE_ADDITIONAL_OPTIONS: --sa -E --rfsim --log_config.global_log_options level,nocolor,time
+            USE_ADDITIONAL_OPTIONS: -E --rfsim --log_config.global_log_options level,nocolor,time
         volumes:
             - ./ran-conf/gnb.conf:/opt/oai-gnb/etc/gnb.conf
         networks:
@@ -67,12 +66,12 @@ services:
             timeout: 5s
             retries: 5
     oai-nr-ue1:
-        image: oaisoftwarealliance/oai-nr-ue:develop
+        image: oaisoftwarealliance/oai-nr-ue:2025.w49
         privileged: true
         container_name: rfsim5g-oai-nr-ue1
-        environment: 
+        environment:
             RFSIMULATOR: 192.168.70.153
-            USE_ADDITIONAL_OPTIONS: -E --sa --rfsim -r 106 --numerology 1 -C 3619200000 --nokrnmod --log_config.global_log_options level,nocolor,time
+            USE_ADDITIONAL_OPTIONS: -E --rfsim -r 106 --numerology 1 -C 3619200000 --log_config.global_log_options level,nocolor,time
         depends_on:
             - oai-gnb
         volumes:
@@ -97,7 +96,7 @@ services:
             - SST=130
             - SD=000082
             - PagingDRX=v32
-            - RANUENGAPID=0 
+            - RANUENGAPID=0
             - IMEISV=35609204079514
             - MSIN=0000000037
             - RoutingIndicator=1234
@@ -123,8 +122,8 @@ services:
             retries: 5
 networks:
     public_net:
-        external:
-            name: demo-oai-public-net
+        name: demo-oai-public-net
+        external: True
     public_net_access:
-        external:
-            name: oai-public-access
+        name: oai-public-access
+        external: True

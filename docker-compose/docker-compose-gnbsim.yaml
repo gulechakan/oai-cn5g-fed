@@ -1,8 +1,7 @@
-version: '3.8'
 services:
     gnbsim:
         container_name: gnbsim
-        image: gnbsim:latest
+        image: rohankharade/gnbsim:latest
         privileged: true
         environment:
             - MCC=208
@@ -36,7 +35,7 @@ services:
             retries: 5
     gnbsim2:
         container_name: gnbsim2
-        image: gnbsim:latest
+        image: rohankharade/gnbsim:latest
         privileged: true
         environment:
             - MCC=208
@@ -70,7 +69,7 @@ services:
             retries: 5
     gnbsim3:
         container_name: gnbsim3
-        image: gnbsim:latest
+        image: rohankharade/gnbsim:latest
         privileged: true
         environment:
             - MCC=208
@@ -104,7 +103,7 @@ services:
             retries: 5
     gnbsim4:
         container_name: gnbsim4
-        image: gnbsim:latest
+        image: rohankharade/gnbsim:latest
         privileged: true
         environment:
             - MCC=208
@@ -138,7 +137,7 @@ services:
             retries: 5
     gnbsim5:
         container_name: gnbsim5
-        image: gnbsim:latest
+        image: rohankharade/gnbsim:latest
         privileged: true
         environment:
             - MCC=208
@@ -173,7 +172,7 @@ services:
 ## This version of gnbsim connects with AMF using, AMF FQDN not with AMF ip-addres (which is good for container world)
     gnbsim-fqdn:
         container_name: gnbsim-fqdn
-        image: gnbsim:latest
+        image: rohankharade/gnbsim:latest
         privileged: true
         environment:
             - MCC=208
@@ -205,5 +204,5 @@ services:
             retries: 5
 networks:
     public_net:
-        external:
-            name: demo-oai-public-net
+        name: demo-oai-public-net
+        external: True

@@ -2,13 +2,13 @@
 ## ref: https://hub.docker.com/r/library/mysql/tags/
 ##
 image: "docker.io/mysql"
-imageTag: "5.7"
+imageTag: "9.2.0"
 
 strategy:
   type: Recreate
 
 busybox:
-  image: "busybox"
+  image: "docker.io/busybox"
   tag: "latest"
 
 testFramework:

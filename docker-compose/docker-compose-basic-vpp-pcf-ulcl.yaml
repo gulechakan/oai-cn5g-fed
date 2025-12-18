@@ -1,8 +1,7 @@
-version: '3.8'
 services:
     mysql:
         container_name: "mysql"
-        image: mysql:8.0
+        image: mysql:9.0
         volumes:
             - ./database/oai_db2.sql:/docker-entrypoint-initdb.d/oai_db.sql
             - ./healthscripts/mysql-healthcheck2.sh:/tmp/mysql-healthcheck.sh
@@ -22,7 +21,7 @@ services:
                 ipv4_address: 192.168.70.131
     oai-udr:
         container_name: "oai-udr"
-        image: oaisoftwarealliance/oai-udr:v2.1.0
+        image: oaisoftwarealliance/oai-udr:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -38,7 +37,7 @@ services:
                 ipv4_address: 192.168.70.136
     oai-udm:
         container_name: "oai-udm"
-        image: oaisoftwarealliance/oai-udm:v2.1.0
+        image: oaisoftwarealliance/oai-udm:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -53,7 +52,7 @@ services:
                 ipv4_address: 192.168.70.137
     oai-ausf:
         container_name: "oai-ausf"
-        image: oaisoftwarealliance/oai-ausf:v2.1.0
+        image: oaisoftwarealliance/oai-ausf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -68,7 +67,7 @@ services:
                 ipv4_address: 192.168.70.138
     oai-nrf:
         container_name: "oai-nrf"
-        image: oaisoftwarealliance/oai-nrf:v2.1.0
+        image: oaisoftwarealliance/oai-nrf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -81,7 +80,7 @@ services:
                 ipv4_address: 192.168.70.130
     oai-amf:
         container_name: "oai-amf"
-        image: oaisoftwarealliance/oai-amf:v2.1.0
+        image: oaisoftwarealliance/oai-amf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -98,7 +97,7 @@ services:
                 ipv4_address: 192.168.70.132
     oai-smf:
         container_name: "oai-smf"
-        image: oaisoftwarealliance/oai-smf:v2.1.0
+        image: oaisoftwarealliance/oai-smf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp
@@ -118,7 +117,7 @@ services:
                 ipv4_address: 192.168.70.133
     oai-pcf:
         container_name: "oai-pcf"
-        image: oaisoftwarealliance/oai-pcf:v2.1.0
+        image: oaisoftwarealliance/oai-pcf:v2.2.0
         expose:
             - 80/tcp
             - 8080/tcp

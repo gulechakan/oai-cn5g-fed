@@ -1,8 +1,7 @@
-version: '3.8'
 services:
     gnbsim-vpp:
         container_name: gnbsim-vpp
-        image: gnbsim:latest
+        image: rohankharade/gnbsim:latest
         privileged: true
         environment:
             - MCC=208
@@ -41,8 +40,8 @@ services:
             retries: 5
 networks:
     public_net:
-        external:
-            name: demo-oai-public-net
+        name: demo-oai-public-net
+        external: True
     public_net_access:
-        external:
-            name: oai-public-access
+        name: oai-public-access
+        external: True
