@@ -18,8 +18,7 @@ services:
             retries: 30
         networks:
             public_net:
-# For CI purposes, we are keeping the line commented
-#                ipv4_address: 192.168.70.131
+               ipv4_address: 192.168.70.131
     oai-udr:
         container_name: "oai-udr"
         image: oaisoftwarealliance/oai-udr:v2.2.0
@@ -35,8 +34,7 @@ services:
             - oai-nrf
         networks:
             public_net:
-# For CI purposes, we are keeping the line commented
-#                ipv4_address: 192.168.70.136
+               ipv4_address: 192.168.70.136
     oai-udm:
         container_name: "oai-udm"
         image: oaisoftwarealliance/oai-udm:v2.2.0
@@ -51,8 +49,7 @@ services:
             - oai-nrf
         networks:
             public_net:
-# For CI purposes, we are keeping the line commented
-#                ipv4_address: 192.168.70.137
+               ipv4_address: 192.168.70.137
     oai-ausf:
         container_name: "oai-ausf"
         image: oaisoftwarealliance/oai-ausf:v2.2.0
@@ -67,8 +64,7 @@ services:
             - oai-nrf
         networks:
             public_net:
-# For CI purposes, we are keeping the line commented
-#                ipv4_address: 192.168.70.138
+               ipv4_address: 192.168.70.138
     oai-nrf:
         container_name: "oai-nrf"
         image: oaisoftwarealliance/oai-nrf:v2.2.0
@@ -81,8 +77,7 @@ services:
             - TZ=Europe/Paris
         networks:
             public_net:
-# For CI purposes, we are keeping the line commented
-#                ipv4_address: 192.168.70.130
+               ipv4_address: 192.168.70.130
     oai-amf:
         container_name: "oai-amf"
         image: oaisoftwarealliance/oai-amf:v2.2.0
@@ -98,8 +93,7 @@ services:
             - oai-nrf
         networks:
             public_net:
-# For CI purposes, we are keeping the line commented
-#                ipv4_address: 192.168.70.132
+               ipv4_address: 192.168.70.132
     oai-smf:
         container_name: "oai-smf"
         image: oaisoftwarealliance/oai-smf:v2.2.0
@@ -115,8 +109,7 @@ services:
             - oai-nrf
         networks:
             public_net:
-# For CI purposes, we are keeping the line commented
-#                ipv4_address: 192.168.70.133
+               ipv4_address: 192.168.70.133
     oai-upf:
         container_name: "oai-upf"
         image: oaisoftwarealliance/oai-upf:v2.2.0
@@ -137,8 +130,7 @@ services:
         privileged: true
         networks:
             public_net:
-# For CI purposes, we are keeping the line commented
-#                ipv4_address: 192.168.70.134
+               ipv4_address: 192.168.70.134
     oai-ext-dn:
         privileged: true
         init: true
@@ -155,8 +147,7 @@ services:
             retries: 5
         networks:
             public_net:
-# For CI purposes, we are keeping the line commented
-#                ipv4_address: 192.168.70.135
+               ipv4_address: 192.168.70.135
 
 networks:
     public_net:
